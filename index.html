@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang='zh-cn'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+  <meta name='screen-orientation' content='portrait'>
+  <meta name='full-screen' content='yes'>
+  <meta name='format-detection' content='telephone=no'>
+  <meta name='browsermode' content='application'>
+  <meta name='x5-orientation' content='portrait'>
+  <meta name='x5-fullscreen' content='true'>
+  <meta name='x5-page-mode' content='app'>
+  <meta name='format-detection' content='telephone=no'>
+  <title>Ade Wallet</title>
+  <link rel='icon' href='favour.ico'>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/wallet-style.css">
+</head>
+<body>
+  <article class="wrap">
+    <header class="home-header-wrap">
+      <img class="header-logo" src="/img/logo.png" alt="logo">
+      <nav class="header-nav-wrap">
+        <a href="#">全网状态</a>
+        <a href="#">数据浏览</a>
+      </nav>
+    </header>
+    <section class="home-content-wrap">
+      <nav class="tool-nav-wrap toolNavHook">
+        <a class="active" href="#/token">创建/发行代币</a>
+        <a href="#/tranfer">转账</a>
+        <a href="#/config">基本配置</a>
+        <a href="#/owner">更换代币拥有者</a>
+        <a href="#/accredit">授权</a>
+        <a href="#/clock">锁仓</a>
+        <a href="#/sale">售出</a>
+        <a href="#/supplier">供应商订单</a>
+        <a href="#/create">创建账户</a>
+        <a href="#/modify">修改公钥/code</a>
+      </nav>
+      <ul class="tool-content-wrap toolContentHook">
+        <!-- 创建/发行代币 -->
+        <li id="token" class="toolItemHook">
+          <nav class="tool-content-menu-wrap tokenMenuWrap">
+            <a class="active" href="javascript:void(0)">创建代币</a>
+            <a href="javascript:void(0)">发行代币</a>
+          </nav>
+          <ul class="tool-content-content-wrap tokenContentWrap">
+            <!-- 创建代币 -->
+            <li>
+              <p>
+                <label>代币拥有者:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>代币最大数量:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>买入比例:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>卖出比例:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>开始时间:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>结束时间:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+            <!-- 发行代币 -->
+            <li>
+              <p>
+                <label>接收人:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>资产数量:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>备注:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- 转账 -->
+        <li id="tranfer" class="toolItemHook">
+          <nav class="tool-content-menu-wrap transferMenuWrap">
+            <a class="active" href="javascript:void(0)">转账</a>
+            <a href="javascript:void(0)">批量转账</a>
+          </nav>
+          <ul class="tool-content-content-wrap transferContentWrap">
+            <!-- 转账 -->
+            <li>
+              <p>
+                <label>发起人:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>接收人:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>资产数量:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>备注:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+            <!-- 批量转账 -->
+            <li>
+              <p>
+                <label>资产数量:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>管理员:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>接收者(多个以逗号分隔):</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- 基本配置 -->
+        <li id="config" class="toolItemHook">
+          <nav class="tool-content-menu-wrap configMenuWrap">
+            <a class="active" href="javascript:void(0)">账户基本配置</a>
+            <a href="javascript:void(0)">代币基本配置</a>
+          </nav>
+          <ul class="tool-content-content-wrap configContentWrap">
+            <!-- 账户基本配置 -->
+            <li>
+              <p>
+                <label>执行者:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>被操作的用户(多个以逗号分隔):</label>
+                <input type="text">
+              </p>
+              <div class="float-wrap">
+                <div>
+                  <span>是:</span>
+                  <input id="ifexecute" type="checkbox">
+                  <label for="ifexecute"></label>
+                </div>
+                <div class="select-wrap">
+                  <label>类型:</label>
+                  <select value='0'>
+                    <option value="0">是否锁定</option>
+                    <option value="1">是否管理员</option>
+                    <option value="2">是否可以卖代币</option>
+                    <option value="3">是否可以执行订单自动化</option>
+                  </select>
+                </div>
+              </div>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+            <!-- 代币基本配置 -->
+            <li>
+              <p>
+                <label>买入比例:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>卖出比例:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>开始时间:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>结束时间:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- 代币拥有者 -->
+        <li id="owner" class="toolItemHook">
+          <nav class="tool-content-menu-wrap ownerMenuWrap">
+            <a class="active" href="javascript:void(0)">更换代币拥有者</a>
+            <a href="javascript:void(0)">同意更换代币拥有者</a>
+          </nav>
+          <ul class="tool-content-content-wrap ownerContentWrap">
+            <!-- 更换代币拥有者 -->
+            <li>
+              <p>
+                <label>新代币拥有者:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+            <!-- 同意更换代币拥有者 -->
+            <li>
+              <p>
+                <label>代币拥有者:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- 授权 -->
+        <li id="accredit" class="toolItemHook">
+          <nav class="tool-content-menu-wrap accreditMenuWrap">
+            <a class="active" href="javascript:void(0)">授权</a>
+            <a href="javascript:void(0)">使用授权</a>
+          </nav>
+          <ul class="tool-content-content-wrap accreditContentWrap">
+            <!-- 授权 -->
+            <li>
+              <p>
+                <label>资产数量:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>授权人:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>被授权人:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+            <!-- 使用授权 -->
+            <li>
+              <p>
+                <label>资产数量:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>授权人:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>被授权人:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>接收者:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- 锁仓 -->
+        <li id="clock" class="toolItemHook">
+          <nav class="tool-content-menu-wrap clockMenuWrap">
+            <a class="active" href="javascript:void(0)">按时间锁仓</a>
+            <a href="javascript:void(0)">按比例锁仓</a>
+          </nav>
+          <ul class="tool-content-content-wrap clockContentWrap">
+            <!-- 按时间锁仓 -->
+            <li>
+              <p>
+                <label>执行者:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>资产数量:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>被锁仓的用户:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>开始释放时间:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>释放比例:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>间隔时间:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+            <!-- 按比例锁仓 -->
+            <li>
+              <p>
+                <label>执行者:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>资产数量:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>被锁仓的用户:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>释放次数:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>释放时间1:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>释放比例1:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- 售出 -->
+        <li id="sale" class="toolItemHook">
+          <nav class="tool-content-menu-wrap saleMenuWrap">
+            <a class="active" href="javascript:void(0)">申请售出</a>
+            <a href="javascript:void(0)">同意售出</a>
+          </nav>
+          <ul class="tool-content-content-wrap saleContentWrap">
+            <!-- 申请售出 -->
+            <li>
+              <p>
+                <label>资产数量:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>售出人:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>备注:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+            <!-- 同意售出 -->
+            <li>
+              <p>
+                <label>执行者:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>订单号:</label>
+                <input type="text">
+              </p>
+              <p class="select-wrap">
+                <label>状态:</label>
+                <select value="0">
+                  <option value="0">同意</option>
+                  <option value="0">拒绝</option>
+                </select>
+              </p>
+              <p>
+                <label>备注:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- 供应商订单 -->
+        <li id="supplier" class="toolItemHook">
+          <nav class="tool-content-menu-wrap supplierMenuWrap">
+            <a class="active" href="javascript:void(0)">创建供应商订单</a>
+            <a href="javascript:void(0)">修改供应商订单</a>
+            <a href="javascript:void(0)">自动更新过期订单</a>
+          </nav>
+          <ul class="tool-content-content-wrap supplierContentWrap">
+            <!-- 创建供应商订单 -->
+            <li>
+              <p>
+                <label>资产数量:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>执行者:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>订单号:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>审核人数:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>接收者:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>异常接收者:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>审核人1:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>审核人2:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>审核人3:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>结束时间:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+            <!-- 修改供应商订单 -->
+            <li>
+              <p>
+                <label>执行者:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>订单号:</label>
+                <input type="text">
+              </p>
+              <p>
+                <label>审核状态:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+            <!-- 自动更新过期订单 -->
+            <li>
+              <p>
+                <label>执行者:</label>
+                <input type="text">
+              </p>
+              <div class="tool-submit-wrap">
+                <button type="button" class="button-bg">确认</button>
+                <button type="reset">重置</button>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- 创建账户 -->
+        <li id="create" class="toolItemHook">
+          <div class="tool-content-menu-wrap">
+            <p>创建账户</p>
+          </div>
+          <section class="tool-content-content-wrap">
+            <p>
+              <label>创建者:</label>
+              <input type="text">
+            </p>
+            <p>
+              <label>新账户:</label>
+              <input type="text">
+            </p>
+            <p>
+              <label>owner公钥:</label>
+              <input type="text">
+            </p>
+            <p>
+              <label>active公钥:</label>
+              <input type="text">
+            </p>
+            <p>
+              <label>分配内存:</label>
+              <input type="text">
+            </p>
+            <p>
+              <label>分配带宽:</label>
+              <input type="text">
+            </p>
+            <p>
+              <label>分配cpu:</label>
+              <input type="text">
+            </p>
+            <div class="tool-submit-wrap">
+              <button type="button" class="button-bg">确认</button>
+              <button type="reset">重置</button>
+            </div>
+          </section>
+        </li>
+        <!-- 修改公钥/code -->
+        <li id="modify" class="toolItemHook">
+          <div class="tool-content-menu-wrap">
+            <p>修改公钥和code</p>
+          </div>
+          <section class="tool-content-content-wrap">
+            <p>
+              <label>被修改的用户:</label>
+              <input type="text">
+            </p>
+            <p>
+              <label>旧公钥:</label>
+              <input type="text">
+            </p>
+            <p>
+              <label>新公钥:</label>
+              <input type="text">
+            </p>
+            <p>
+              <label>合约名称:</label>
+              <input type="text">
+            </p>
+            <p>
+              <label>合约权重:</label>
+              <input type="text">
+            </p>
+            <div class="tool-submit-wrap">
+              <button type="button" class="button-bg">确认</button>
+              <button type="reset">重置</button>
+            </div>
+          </section>
+        </li>
+      </ul>
+    </section>
+  </article>
+
+  <script src="js/utils.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/action.js"></script>
+</body>
+</html>

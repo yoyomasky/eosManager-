@@ -1,0 +1,245 @@
+@media screen and (min-width: 1200px) {
+
+  body {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+    color: #1a1a1a;
+    background-color: #eef2f6;
+  }
+
+  .wrap {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .home-header-wrap {
+    height: 110px;
+  }
+
+  .header-logo {
+    margin-top: 30px;
+    height: 50px;
+  }
+
+  .header-nav-wrap {
+    float: right;
+    margin-top: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .header-nav-wrap a {
+    margin: 0 15px;
+    font-size: 14px;
+  }
+
+  .header-nav-wrap a:hover {
+    color: #0db09c;
+  }
+
+  .home-content-wrap {
+    overflow: hidden;
+  }
+
+  .tool-nav-wrap {
+    float: left;
+    width: 170px;
+    padding-bottom: 15px;
+    background-color: #0db09c;
+  }
+
+  .tool-nav-wrap a {
+    display: block;
+    height: 48px;
+    padding-left: 25px;
+    line-height: 48px;
+    color: #fff;
+  }
+
+  .tool-nav-wrap a.active,
+  .tool-nav-wrap a.active:hover {
+    position: relative;
+    background-color: #0e9d8b;
+  }
+
+  .tool-nav-wrap a:hover {
+    background-color: #09ab97;
+  }
+
+  .tool-nav-wrap a.active:after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    margin-top: -6px;
+    width: 0;
+    height: 0;
+    box-sizing: content-box;
+    border: 6px solid transparent;
+    border-left-color: #0e9d8b;
+  }
+
+  .tool-content-wrap {
+    margin-left: 200px;
+    padding: 0 25px;
+    background-color: #fff;
+  }
+
+  .tool-content-wrap>li {
+    display: none;
+    min-height: 600px;
+  }
+
+  .tool-content-wrap>li:first-child {
+    display: block;
+  }
+
+  .tool-content-menu-wrap {
+    height: 80px;
+    padding: 20px;
+    margin-left: -25px;
+    margin-right: -25px;
+    background-color: rgb(194, 240, 245);
+    color: #666;
+  }
+
+  .tool-content-menu-wrap a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    margin-right: 10px;
+    border-radius: 6px;
+    border: 1px solid #09ab97;
+    color: #09ab97;
+    background-color: #fff;
+  }
+
+  .tool-content-menu-wrap a.active {
+    background-color: #09ab97;
+    color: #fff;
+  }
+
+  .tool-content-menu-wrap p {
+    font-size: 16px;
+    line-height: 40px;
+    color: #09ab97;
+  }
+
+  .tool-content-content-wrap {
+    padding-top: 20px;
+  }
+
+  .tool-content-content-wrap li {
+    display: none;
+  }
+
+  .tool-content-content-wrap li:first-child {
+    display: block;
+  }
+
+  .tool-content-wrap p {
+    margin-bottom: 10px;
+  }
+
+  .tool-content-wrap p label {
+    display: block;
+    line-height: 30px;
+  }
+
+  .tool-content-wrap p input {
+    width: 100%;
+    height: 36px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    text-indent: 0.5em;
+    border-radius: 4px;
+  }
+
+  .tool-content-wrap p input:focus {
+    border-color: #09ab97;
+    box-shadow: 0 0 2px rgb(7, 106, 94);
+  }
+
+  .tool-submit-wrap {
+    padding: 10px 0 25px;
+    font-size: 0;
+  }
+
+  .tool-submit-wrap button {
+    display: inline-block;
+    height: 36px;
+    padding: 0 25px;
+    margin-right: 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #09ab97;
+    color: #09ab97;
+    cursor: pointer;
+  }
+
+  .tool-submit-wrap button.button-bg {
+    background-color: #09ab97;
+    color: #fff;
+  }
+
+  .float-wrap {
+    padding: 15px 0;
+    overflow: hidden;
+  }
+
+  .float-wrap>* {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .float-wrap input[type=checkbox] {
+    display: none;
+  }
+
+  .float-wrap input[type=checkbox]+label {
+    vertical-align: middle;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .float-wrap input[type=checkbox]:checked+label {
+    border-color: #0e9d8b;
+    background-color: #0e9d8b;
+    background-image: url('../img/checkout-active.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .float-wrap p {
+    line-height: 36px;
+  }
+
+  .select-wrap select {
+    height: 36px;
+    font-size: 16px;
+    text-indent: 2px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  #config .select-wrap {
+    margin-left: 15px;
+  }
+
+  #config .select-wrap select {
+    width: 240px;
+    margin-left: 4px;
+  }
+
+  #sale select {
+    width: 100%;
+  }
+}
