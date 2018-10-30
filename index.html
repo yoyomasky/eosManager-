@@ -19,7 +19,7 @@
 <body>
   <article class="wrap">
     <header class="home-header-wrap">
-      <img class="header-logo" src="/img/logo.png" alt="logo">
+      <img class="header-logo" src="img/logo.png" alt="logo">
       <nav class="header-nav-wrap">
         <a href="#">全网状态</a>
         <a href="#">数据浏览</a>
@@ -27,7 +27,7 @@
     </header>
     <section class="home-content-wrap">
       <nav class="tool-nav-wrap toolNavHook">
-        <a class="active" href="#/token">创建/发行代币</a>
+        <a class="active" href="#/token">发行代币</a>
         <a href="#/tranfer">转账</a>
         <a href="#/config">基本配置</a>
         <a href="#/owner">更换代币拥有者</a>
@@ -35,64 +35,65 @@
         <a href="#/clock">锁仓</a>
         <a href="#/sale">售出</a>
         <a href="#/supplier">供应商订单</a>
-        <a href="#/create">创建账户</a>
-        <a href="#/modify">修改公钥/code</a>
+        <!--<a href="#/create">创建账户</a>-->
+        <!--<a href="#/modify">修改公钥/code</a>-->
       </nav>
       <ul class="tool-content-wrap toolContentHook">
         <!-- 创建/发行代币 -->
         <li id="token" class="toolItemHook">
           <nav class="tool-content-menu-wrap tokenMenuWrap">
-            <a class="active" href="javascript:void(0)">创建代币</a>
-            <a href="javascript:void(0)">发行代币</a>
+            <!--<a class="active" href="javascript:void(0)">创建代币</a>-->
+            <!--<a href="javascript:void(0)">发行代币</a>-->
+            <p>发行代币</p>
           </nav>
           <ul class="tool-content-content-wrap tokenContentWrap">
             <!-- 创建代币 -->
-            <li>
-              <p>
-                <label>代币拥有者:</label>
-                <input type="text">
-              </p>
-              <p>
-                <label>代币最大数量:</label>
-                <input type="text">
-              </p>
-              <p>
-                <label>买入比例:</label>
-                <input type="text">
-              </p>
-              <p>
-                <label>卖出比例:</label>
-                <input type="text">
-              </p>
-              <p>
-                <label>开始时间:</label>
-                <input type="text">
-              </p>
-              <p>
-                <label>结束时间:</label>
-                <input type="text">
-              </p>
-              <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
-                <button type="reset">重置</button>
-              </div>
-            </li>
-            <!-- 发行代币 -->
-            <li>
+            <!--   <li class="tokenCreate">
+                <p>
+                  <label>代币拥有者:</label>
+                  <input type="text" data-rule='pattern:"createTokenOwner__^\\w{4,}$"'>
+                </p>
+                <p>
+                  <label>代币最大数量:</label>
+                  <input type="text" data-rule="max:100">
+                </p>
+                <p>
+                  <label>买入比例:</label>
+                  <input type="text" data-rule="">
+                </p>
+                <p>
+                  <label>卖出比例:</label>
+                  <input type="text" data-rule="">
+                </p>
+                <p>
+                  <label>开始时间:</label>
+                  <input type="date" data-rule="">
+                </p>
+                <p>
+                  <label>结束时间:</label>
+                  <input type="date" data-rule="">
+                </p>
+                <div class="tool-submit-wrap">
+                  <button type="button" class="button-bg toolSubmit">确认</button>
+                  <button type="reset">重置</button>
+                </div>
+              </li>-->
+              <!-- 发行代币 -->
+            <li class="tokenPublish">
               <p>
                 <label>接收人:</label>
-                <input type="text">
+                <input type="text" data-rule="maxLength:5|minLength:2">
               </p>
               <p>
                 <label>资产数量:</label>
-                <input type="text">
+                <input type="text" data-rule="isNumeric:true">
               </p>
               <p>
                 <label>备注:</label>
-                <input type="text">
+                <input type="text" data-rule="required:false">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -124,7 +125,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -143,7 +144,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -183,7 +184,7 @@
                 </div>
               </div>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -206,7 +207,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -226,7 +227,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -237,7 +238,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -265,7 +266,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -288,7 +289,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -328,7 +329,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -359,7 +360,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -387,7 +388,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -413,7 +414,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -470,7 +471,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -489,7 +490,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -500,7 +501,7 @@
                 <input type="text">
               </p>
               <div class="tool-submit-wrap">
-                <button type="button" class="button-bg">确认</button>
+                <button type="button" class="button-bg toolSubmit">确认</button>
                 <button type="reset">重置</button>
               </div>
             </li>
@@ -541,7 +542,7 @@
               <input type="text">
             </p>
             <div class="tool-submit-wrap">
-              <button type="button" class="button-bg">确认</button>
+              <button type="button" class="button-bg toolSubmit">确认</button>
               <button type="reset">重置</button>
             </div>
           </section>
@@ -573,7 +574,7 @@
               <input type="text">
             </p>
             <div class="tool-submit-wrap">
-              <button type="button" class="button-bg">确认</button>
+              <button type="button" class="button-bg toolSubmit">确认</button>
               <button type="reset">重置</button>
             </div>
           </section>
@@ -581,9 +582,21 @@
       </ul>
     </section>
   </article>
-
+  <!-- 工具方法 -->
   <script src="js/utils.js"></script>
+  <!-- 页面路由 -->
   <script src="js/router.js"></script>
+  <!-- 页面交互 -->
   <script src="js/action.js"></script>
+  <!-- layer -->
+  <script src="js/layer.js"></script>
+  <!-- 表单验证 -核心类库 -->
+  <script src="js/validator.js"></script>
+  <!-- 表单验证 - 提示信息 -->
+  <script src="js/validator.msg.js"></script>
+  <!-- 表单验证 - 验证规则 -->
+  <script src="js/validator.rules.js"></script>
+  <!-- 表单验证 - 业务代码 -->
+  <script src="js/validator.operation.js"></script>
 </body>
 </html>
