@@ -1,7 +1,7 @@
 var eos = {};
 var permissions;
 var user_acc='';
-const Contract_Name='owner1111114';
+const Contract_Name='owner1111121';
 const transactionInfoLink='https://jungle.bloks.io/transaction/';
 var config = {
     httpEndpoint: 'http://jungle.cryptolions.io:18888', //DEV开发链url与端口
