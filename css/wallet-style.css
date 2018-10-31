@@ -245,7 +245,7 @@
 
   /** 表格样式 */
   .table-wrap {
-    margin-top: 15px;
+    padding-top: 10px;
   }
 
   .table-wrap table {
@@ -253,4 +253,73 @@
     border-collapse: collapse;
     border: 1px solid #ddd;
   }
+
+  .table-wrap th,
+  .table-wrap td {
+    padding: 10px 0;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table-wrap th {
+    background-color: #f9f9f9;
+  }
+
+  .table-wrap td {
+    color: #444;
+  }
+
+  .table-wrap tr:nth-child(2n) {
+    background-color: #fcfcfc;
+  }
+
+  .table-succeed {
+    color: green !important;
+  }
+
+  .table-fail {
+    color: #c10 !important;
+  }
+
+  :root {
+    --themeColor: #09ab97;
+  }
+
+  .mf-Pagination-wrap {
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0;
+  }
+
+  .mf-Pagination-wrap button {
+    display: inline-block;
+    height: 40px;
+    margin: 0 5px;
+    padding: 0 15px;
+    line-height: 40px;
+    text-align: center;
+    color: #444;
+    border: 1px solid #ddd;
+    background: none;
+    font-size: 16px;
+    border-radius: 4px;
+    animation: 0.4s;
+    cursor: pointer;
+  }
+
+  .mf-Pagination-wrap button.active,
+  .mf-Pagination-wrap button:hover {
+    border-color: var(--themeColor);
+    background-color: var(--themeColor);
+    color: #fff;
+    animation: 0.4s;
+  }
+
+  .mf-Pagination-wrap button:hover {
+    opacity: 0.4;
+  }
+
 }
