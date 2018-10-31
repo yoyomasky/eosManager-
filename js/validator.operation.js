@@ -6,7 +6,10 @@
    })
    //账户基本配置
    verify('.basicConfig', function () {
-         //layer('基本配置成功');
        setaccconfig();
+   })
+   //代币基本配置
+   verify('.setconfig', function () {
+       setconfig();
    })
  }, false)

@@ -174,39 +174,29 @@ function Eos_transaction(contractName,actionName,authorization,data,val){
         //getAccInfo(user_acc);
         alertBootomPop(result.transaction_id);
 
-    }).catch(error=>{
+    }).catch(error =>{
         if(typeof error != "object"){
             error = JSON.parse(error);
-            console.log(error);
-            console.log(error.message);
-            return;
         }
-        console.log(error.message);return;
-        //console.log(eval(error));
+         console.log(error);
         //资产输入错误
-        error=" "+error+" ";
-        error=JSON.parse(error.substr(error.indexOf(':')+1));
-
-        if(error.message.indexOf(m_msg.e1000000) != -1){
-            //console.log(mMsg['3010011']);
-            console.log(m_msg.e3010011);
+        if(error.message.indexOf(mMsg['1000000']) != -1){
+            layer.msg(mMsg['3010011']);
             return ;
         }else{
-            switch(error.error.code){
-                case 0:
-                    layer.msg(m_msg.e1000002);
-                    return ;
-                    break;
-                case 3010001:
-                    layer.msg(m_msg.e1000002);
-                    return ;
-                    break;
+            var details = error.error.details;
+            //内部错误
+            if(error.error.code != 3050003){
+                layer.msg(mMsg[error.error.code]);
+            }else{//合约提示错误
+                var index_one = details[0].message.indexOf(':');
+                var message = details[0].message.substr(index_one + 1);
+                layer.msg(message);
             }
         }
     });
 }
 function alertBootomPop(id){
-    console.log(id);
     $('.footer_pop').show();
     $('.footer_pop > .bottom-hint-content  p').html(id);
     $('.transaction_send_show_btn').attr('href',transactionInfoLink+id);

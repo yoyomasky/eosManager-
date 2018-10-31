@@ -3,7 +3,6 @@
   // 提示信息
   function vLayer(msg) {
      layer.msg(this.name + msg);
-    //layer(this.name + msg)
   }
   // 输入不为空
   r.validator_required = function () {
@@ -62,15 +61,5 @@
       vLayer.call(this, _msg)
       return false
     }
-  }
-  //验证账户
-  r.validator_account = function () {
-    console.log(this.val,this.val.length);
-      var re = /^[a-z1-5]([a-z1-5]|.)[a-z1-5]{12}$/;
-      if (!re.test(this.val)) {
-          vLayer.call(this, m.pattern['verifyAccount'])
-          return false
-      }
-      return true
   }
 }(window.validator_rules, window.validator_msg))
