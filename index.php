@@ -15,12 +15,14 @@
     <link rel='icon' href='favour.ico'>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/wallet-style.css">
-
     <script src="/node_modules/eosjs/lib/eos.js"></script>
     <script src="/node_modules/eosjs-api/lib/eos-api.js"></script>
+    <script src="/js/jquery.min.js"></script>
+
     <script src="/js/config.js?v=<?=time()?>"></script>
     <script src="/js/function.js?v=<?=time()?>"></script>
     <script src="/js/adminTransfer.js?v=<?=time()?>"></script>
+    <script src="/js/basicConfig.js?v=<?=time()?>"></script>
 
 </head>
 <body>
@@ -184,15 +186,14 @@
                             <div class="select-wrap">
                                 <label>类型:</label>
                                 <select value='0'>
-                                    <option value="0">是否锁定</option>
-                                    <option value="1">是否管理员</option>
+                                    <option value="1">是否锁定</option>
                                     <option value="2">是否可以卖代币</option>
                                     <option value="3">是否可以执行订单自动化</option>
                                 </select>
                             </div>
                         </div>
                         <div class="tool-submit-wrap">
-                            <button type="button" class="button-bg toolSubmit">确认</button>
+                            <button type="button" class="button-bg toolSubmit" id="accountBtn">确认</button>
                             <button type="reset">重置</button>
                         </div>
                     </li>
