@@ -1,16 +1,15 @@
  window.addEventListener('DOMContentLoaded', function () {
-
-    // 发行代币
-    verify('.tokenPublish', function () {
-     layer('验证成功')
-    })
-    //账户基本配置
-    verify('.basicConfig', function () {
+     // 发行代币
+     verify('.tokenPublish', function () {
+         layer('验证成功')
+     })
+     //账户基本配置
+     verify('.basicConfig', function () {
          //layer('基本配置成功');
-       setaccconfig();
-    })
-    verify('.setAuthManager', function () {
-     //layer('基本配置成功');
-     //setaccconfig();
-    })
+         setaccconfig();
+     })
+     //设置管理员
+     verify('.setAuthManager', function () {
+
+     })
  }, false)
