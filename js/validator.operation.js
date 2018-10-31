@@ -4,4 +4,9 @@
    verify('.tokenPublish', function () {
      layer('验证成功')
    })
+   //账户基本配置
+   verify('.basicConfig', function () {
+         //layer('基本配置成功');
+       setaccconfig();
+   })
  }, false)

@@ -15,14 +15,17 @@
     <link rel='icon' href='favour.ico'>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/wallet-style.css">
+    <link rel="stylesheet" href="css/foot.css">
     <script src="/node_modules/eosjs/lib/eos.js"></script>
     <script src="/node_modules/eosjs-api/lib/eos-api.js"></script>
     <script src="/js/jquery.min.js"></script>
+    <script src="/layer/layer.js"></script>
 
     <script src="/js/config.js?v=<?=time()?>"></script>
     <script src="/js/function.js?v=<?=time()?>"></script>
     <script src="/js/adminTransfer.js?v=<?=time()?>"></script>
     <script src="/js/basicConfig.js?v=<?=time()?>"></script>
+<!--    <script src="/js/eostest.js?v=--><?//=time()?><!--"></script>-->
 
 </head>
 <body>
@@ -168,24 +171,20 @@
                 </nav>
                 <ul class="tool-content-content-wrap configContentWrap">
                     <!-- 账户基本配置 -->
-                    <li>
-                        <p>
-                            <label>执行者:</label>
-                            <input type="text">
-                        </p>
+                    <li class="basicConfig">
                         <p>
                             <label>被操作的用户(多个以逗号分隔):</label>
-                            <input type="text">
+                            <input type="text" class="owner" data-rule="" value="liang1111111">
                         </p>
                         <div class="float-wrap">
                             <div>
                                 <span>是:</span>
-                                <input id="ifexecute" type="checkbox">
+                                <input id="ifexecute" type="checkbox" class="isSelected">
                                 <label for="ifexecute"></label>
                             </div>
                             <div class="select-wrap">
                                 <label>类型:</label>
-                                <select value='0'>
+                                <select value='0' class="type">
                                     <option value="1">是否锁定</option>
                                     <option value="2">是否可以卖代币</option>
                                     <option value="3">是否可以执行订单自动化</option>
@@ -614,6 +613,16 @@
         </ul>
     </section>
 </article>
+<div class="container-fluid footer_pop px" style="display: none">
+    <div class="bottom-hint-content">
+        <div class="left">
+            <div class="transaction_send_title">  您的交易已发送，交易码如下： </div>
+            <p></p>
+        </div>
+        <a class="bottom-hint-btn transaction_send_show_btn" href="https://ropsten.etherscan.io/tx/0x0b9f30782c1ecbfc52fc483d2f350e3a713d87fb8343c9e679fa70a70775cf70" target="_blank">查看交易状态</a>
+        <a href="javascript:closeBootomPop();" class="pa bottom-hint-addr"></a>
+    </div>
+</div>
 <!-- 工具方法 -->
 <script src="js/utils.js"></script>
 <!-- 页面路由 -->
@@ -621,7 +630,7 @@
 <!-- 页面交互 -->
 <script src="js/action.js"></script>
 <!-- layer -->
-<script src="js/layer.js"></script>
+<!--<script src="js/layer.js"></script>-->
 <!-- 表单验证 -核心类库 -->
 <script src="js/validator.js"></script>
 <!-- 表单验证 - 提示信息 -->

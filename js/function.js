@@ -5,6 +5,7 @@ function importKey(prvKeyInp){
 }
 //获取账号信息
 function getAccInfo(acc) {
+    var eos = Eos(config);
     if($.trim(acc)==''){
         //alert(m_msg.e1000002);
         layer.msg(m_msg.e1000002);
@@ -170,7 +171,7 @@ function Eos_transaction(contractName,actionName,authorization,data,val){
     }).then(result => {
         console.log(result);
         console.log(result.transaction);
-        getAccInfo(user_acc);
+        //getAccInfo(user_acc);
         alertBootomPop(result.transaction_id);
 
     }).catch(error=>{
@@ -205,8 +206,12 @@ function Eos_transaction(contractName,actionName,authorization,data,val){
     });
 }
 function alertBootomPop(id){
-    $('.footer_pop').removeClass('hide');
-    $('.footer_pop > .bottom-hint-content > p').text(id);
+    console.log(id);
+    $('.footer_pop').show();
+    $('.footer_pop > .bottom-hint-content  p').html(id);
     $('.transaction_send_show_btn').attr('href',transactionInfoLink+id);
 
+}
+function closeBootomPop() {
+    $('.footer_pop').hide();
 }
