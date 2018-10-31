@@ -51,6 +51,7 @@
   router.route('/supplier')
   router.route('/create')
   router.route('/modify')
+  router.route('/setAdmin')
   //初始化调用
   router.init()
 }())

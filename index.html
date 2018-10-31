@@ -35,6 +35,7 @@
         <a href="#/clock">锁仓</a>
         <a href="#/sale">售出</a>
         <a href="#/supplier">供应商订单</a>
+        <a href="#/setAdmin">设置管理员</a>
         <!--<a href="#/create">创建账户</a>-->
         <!--<a href="#/modify">修改公钥/code</a>-->
       </nav>
@@ -506,6 +507,29 @@
               </div>
             </li>
           </ul>
+        </li>
+        <!-- 设置管理员 -->
+        <li id="setAdmin" class="toolItemHook">
+          <div class="tool-content-menu-wrap">
+            <p>设置管理员</p>
+          </div>
+          <section class="tool-content-content-wrap">
+            <p>
+              <label>被操作的用户(多个以逗号分隔):</label>
+              <input type="text">
+            </p>
+            <div class="float-wrap">
+              <div>
+                <span>是:</span>
+                <input id="isAdmin" type="checkbox">
+                <label for="isAdmin"></label>
+              </div>
+            </div>
+            <div class="tool-submit-wrap">
+              <button type="button" class="button-bg toolSubmit">确认</button>
+              <button type="reset">重置</button>
+            </div>
+          </section>
         </li>
         <!-- 创建账户 -->
         <li id="create" class="toolItemHook">
