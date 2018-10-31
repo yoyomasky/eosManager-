@@ -162,6 +162,19 @@
                         </div>
                     </li>
                 </ul>
+                <!-- 表格 -->
+                <div class="table-wrap transferTable">
+                        <table>
+                            <thead>
+                                <th>1</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
             </li>
             <!-- 基本配置 -->
             <li id="config" class="toolItemHook">

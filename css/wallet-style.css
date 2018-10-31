@@ -91,7 +91,7 @@
   }
 
   /*.tool-content-wrap>li:first-child {*/
-    /*display: block;*/
+  /*display: block;*/
   /*}*/
 
   .tool-content-menu-wrap {
@@ -241,5 +241,16 @@
 
   #sale select {
     width: 100%;
+  }
+
+  /** 表格样式 */
+  .table-wrap {
+    margin-top: 15px;
+  }
+
+  .table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
   }
 }
