@@ -1,15 +1,23 @@
- window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
 
-   // 发行代币
-   verify('.tokenPublish', function () {
+    // 发行代币
+    verify('.tokenPublish', function () {
      layer('验证成功')
-   })
-   //账户基本配置
-   verify('.basicConfig', function () {
+    })
+    //账户基本配置
+    verify('.basicConfig', function () {
        setaccconfig();
-   })
-   //代币基本配置
-   verify('.setconfig', function () {
+    })
+    //代币基本配置
+    verify('.setconfig', function () {
        setconfig();
-   })
- }, false)
+    })
+    //更换代币拥有者
+    verify('.setissuer', function () {
+        setissuer();
+    })
+    //同意更换代币拥有者
+    verify('.acceptissuer', function () {
+        acceptissuer();
+    })
+}, false)

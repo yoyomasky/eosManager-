@@ -173,7 +173,7 @@
                     <li class="basicConfig">
                         <p>
                             <label>被操作的用户(多个以逗号分隔):</label>
-                            <input type="text" class="owner" data-rule="" value="liang1111111">
+                            <input type="text" class="owner" data-rule="">
                         </p>
                         <div class="float-wrap">
                             <div>
@@ -191,7 +191,7 @@
                             </div>
                         </div>
                         <div class="tool-submit-wrap">
-                            <button type="button" class="button-bg toolSubmit" id="accountBtn">确认</button>
+                            <button type="button" class="button-bg toolSubmit">确认</button>
                             <button type="reset">重置</button>
                         </div>
                     </li>
@@ -228,10 +228,10 @@
                 </nav>
                 <ul class="tool-content-content-wrap ownerContentWrap">
                     <!-- 更换代币拥有者 -->
-                    <li>
+                    <li class="setissuer">
                         <p>
                             <label>新代币拥有者:</label>
-                            <input type="text">
+                            <input type="text" class="owner" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <div class="tool-submit-wrap">
                             <button type="button" class="button-bg toolSubmit">确认</button>
@@ -239,10 +239,10 @@
                         </div>
                     </li>
                     <!-- 同意更换代币拥有者 -->
-                    <li>
+                    <li class="acceptissuer">
                         <p>
                             <label>代币拥有者:</label>
-                            <input type="text">
+                            <input type="text" class="owner" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <div class="tool-submit-wrap">
                             <button type="button" class="button-bg toolSubmit">确认</button>

@@ -6,7 +6,7 @@ window.validator_msg = {
   maxLen: '不大于为n个字符',
   minLen: '不小于为n个字符',
   pattern: {
-    verifyAccount: '帐号名称应为a-z1-5.'
+    verifyAccount: '账户应为12个字符(a-z1-5.)'
   },
 }
 //错误码提示语
