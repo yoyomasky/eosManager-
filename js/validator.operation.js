@@ -1,9 +1,14 @@
 window.addEventListener('DOMContentLoaded', function () {
-
+    //----------------------mc----------------------------
     // 发行代币
     verify('.tokenPublish', function () {
      layer('验证成功')
     })
+    //设置管理员
+    verify('.setAuthManager', function () {
+
+    })
+    //----------------------yl------------------------------
     //账户基本配置
     verify('.basicConfig', function () {
        setaccconfig();
