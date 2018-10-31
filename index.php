@@ -23,6 +23,8 @@
     <script src="/js/function.js?v=<?=time()?>"></script>
     <script src="/js/adminTransfer.js?v=<?=time()?>"></script>
     <script src="/js/basicConfig.js?v=<?=time()?>"></script>
+    <script src="/js/issuingTokens.js?v=<?=time()?>"></script>
+    <script src="/js/authManager.js?v=<?=time()?>"></script>
 
 </head>
 <body>
@@ -517,25 +519,24 @@
                 </ul>
             </li>
             <!-- 设置管理员 -->
-            <li id="setAdmin" class="toolItemHook">
+            <li id="setAdmin" class="toolItemHook setAuthManager">
                 <div class="tool-content-menu-wrap">
                     <p>设置管理员</p>
                 </div>
                 <section class="tool-content-content-wrap">
                     <p>
-                        <label>被操作的用户(多个以逗号分隔):</label>
-                        <input type="text">
+                        <label>账户地址(多个以逗号分隔):</label>
+                        <input type="text" data-rule="" class="setAuthAccInp">
                     </p>
-                    <div class="float-wrap">
-                        <div>
-                            <span>是:</span>
-                            <input id="isAdmin" type="checkbox">
-                            <label for="isAdmin"></label>
-                        </div>
-                    </div>
+<!--                    <div class="float-wrap">-->
+<!--                        <div>-->
+<!--                            <span>是:</span>-->
+<!--                            <input id="isAdmin" type="checkbox">-->
+<!--                            <label for="isAdmin"></label>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="tool-submit-wrap">
-                        <button type="button" class="button-bg toolSubmit">确认</button>
-                        <button type="reset">重置</button>
+                        <button type="button" class="button-bg toolSubmit setAuthManagerBut">确认授权</button>
                     </div>
                 </section>
             </li>
