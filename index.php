@@ -27,7 +27,6 @@
     <script src="/js/basicConfig.js?v=<?=time()?>"></script>
     <script src="/js/issuingTokens.js?v=<?=time()?>"></script>
     <script src="/js/authManager.js?v=<?=time()?>"></script>
-    <!-- mf测试 -->
 </head>
 <body>
 <article class="wrap">
