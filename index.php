@@ -198,22 +198,22 @@
                         </div>
                     </li>
                     <!-- 代币基本配置 -->
-                    <li>
+                    <li class="setconfig">
                         <p>
                             <label>买入比例:</label>
-                            <input type="text">
+                            <input type="text" data-rule="" class="buyRate">
                         </p>
                         <p>
                             <label>卖出比例:</label>
-                            <input type="text">
+                            <input type="text" data-rule="" class="sellRate">
                         </p>
                         <p>
                             <label>开始时间:</label>
-                            <input type="text">
+                            <input type="text" data-rule="" class="startTime">
                         </p>
                         <p>
                             <label>结束时间:</label>
-                            <input type="text">
+                            <input type="text" data-rule="" class="endTime">
                         </p>
                         <div class="tool-submit-wrap">
                             <button type="button" class="button-bg toolSubmit">确认</button>
