@@ -2,7 +2,8 @@
 (function (r, m) {
   // 提示信息
   function vLayer(msg) {
-    layer(this.name + msg)
+     layer.msg(this.name + msg);
+    //layer(this.name + msg)
   }
   // 输入不为空
   r.validator_required = function () {
@@ -45,7 +46,7 @@
   r.validator_maxLength = function () {
     var len = this.val.length
     var maxLen = this.rules.maxLength
-    console.log(len, maxLen)
+    //console.log(len, maxLen)
     if (len > maxLen) {
       var _msg = m.maxLen.replace('n', maxLen)
       vLayer.call(this, _msg)
@@ -55,11 +56,21 @@
   r.validator_minLength = function () {
     var len = this.val.length
     var minLen = this.rules.minLength
-    console.log(len, minLen)
+    //console.log(len, minLen)
     if (len < minLen) {
       var _msg = m.minLen.replace('n', minLen)
       vLayer.call(this, _msg)
       return false
     }
+  }
+  //验证账户
+  r.validator_account = function () {
+    console.log(this.val,this.val.length);
+      var re = /^[a-z1-5]([a-z1-5]|.)[a-z1-5]{12}$/;
+      if (!re.test(this.val)) {
+          vLayer.call(this, m.pattern['verifyAccount'])
+          return false
+      }
+      return true
   }
 }(window.validator_rules, window.validator_msg))

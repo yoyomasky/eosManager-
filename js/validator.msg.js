@@ -6,6 +6,6 @@ window.validator_msg = {
   maxLen: '不大于为n个字符',
   minLen: '不小于为n个字符',
   pattern: {
-    createTokenOwner: '字母或数字，4位以上'
+    verifyAccount: '帐号名称应为a-z1-5.'
   }
 }
