@@ -28,7 +28,6 @@
     <script src="/js/basicConfig.js?v=<?=time()?>"></script>
     <script src="/js/issuingTokens.js?v=<?=time()?>"></script>
     <script src="/js/authManager.js?v=<?=time()?>"></script>
-
 </head>
 <body>
 <article class="wrap">
@@ -164,7 +163,25 @@
                         </div>
                     </li>
                 </ul>
+                <!-- 表格 -->
+                <div class="table-wrap transferTable">
+					<table>
+						<thead>
+							<th>编号</th>
+							<th>绑定账号</th>
+							<th>转出地址</th>
+							<th>转入地址</th>
+							<th>交易哈希</th>
+							<th>数量</th>
+							<th>状态</th>
+							<th>交易时间</th>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
             </li>
+            
             <!-- 基本配置 -->
             <li id="config" class="toolItemHook">
                 <nav class="tool-content-menu-wrap configMenuWrap">
@@ -664,5 +681,8 @@
 <script src="js/validator.rules.js"></script>
 <!-- 表单验证 - 业务代码 -->
 <script src="js/validator.operation.js"></script>
+<!-- 分页 -->
+<script src="js/pages.js"></script>
+<script src="js/pages.operation.js"></script>
 </body>
 </html>

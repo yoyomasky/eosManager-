@@ -1,8 +1,9 @@
 @media screen and (min-width: 1200px) {
-
   body {
     font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+      Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei,
+      sans-serif;
     color: #1a1a1a;
     background-color: #eef2f6;
   }
@@ -85,13 +86,15 @@
     background-color: #fff;
   }
 
-  .tool-content-wrap>li {
+  .tool-content-wrap > li {
     display: none;
     min-height: 600px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   /*.tool-content-wrap>li:first-child {*/
-    /*display: block;*/
+  /*display: block;*/
   /*}*/
 
   .tool-content-menu-wrap {
@@ -189,16 +192,16 @@
     overflow: hidden;
   }
 
-  .float-wrap>* {
+  .float-wrap > * {
     display: inline-block;
     vertical-align: middle;
   }
 
-  .float-wrap input[type=checkbox] {
+  .float-wrap input[type='checkbox'] {
     display: none;
   }
 
-  .float-wrap input[type=checkbox]+label {
+  .float-wrap input[type='checkbox'] + label {
     vertical-align: middle;
     display: inline-block;
     width: 20px;
@@ -209,7 +212,7 @@
     cursor: pointer;
   }
 
-  .float-wrap input[type=checkbox]:checked+label {
+  .float-wrap input[type='checkbox']:checked + label {
     border-color: #0e9d8b;
     background-color: #0e9d8b;
     background-image: url('../img/checkout-active.png');
@@ -241,5 +244,89 @@
 
   #sale select {
     width: 100%;
+  }
+
+  /** 表格样式 */
+  .table-wrap {
+    padding-top: 10px;
+  }
+
+  .table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+
+  .table-wrap th,
+  .table-wrap td {
+    padding: 10px 0;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table-wrap th {
+    background-color: #f9f9f9;
+  }
+
+  .table-wrap td {
+    color: #444;
+  }
+
+  .table-wrap tr:nth-child(2n) {
+    background-color: #fcfcfc;
+  }
+
+  .table-succeed {
+    color: green !important;
+  }
+
+  .table-fail {
+    color: #c10 !important;
+  }
+
+  :root {
+    --themeColor: #09ab97;
+  }
+
+  .mf-Pagination-wrap {
+    width: 100%;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 0;
+  }
+
+  .mf-Pagination-wrap button {
+    display: inline-block;
+    height: 40px;
+    margin: 0 5px;
+    padding: 0 15px;
+    line-height: 40px;
+    text-align: center;
+    color: #444;
+    border: 1px solid #ddd;
+    background: none;
+    font-size: 16px;
+    border-radius: 4px;
+    animation: 0.4s;
+    cursor: pointer;
+  }
+
+  .mf-Pagination-wrap button.active,
+  .mf-Pagination-wrap button:hover {
+    border-color: var(--themeColor);
+    background-color: var(--themeColor);
+    color: #fff;
+    animation: 0.4s;
+  }
+
+  .mf-Pagination-wrap button:hover {
+    opacity: 0.4;
+  }
+  .mf-table-loading {
+    width: 60px;
+    height: 60px;
+    margin: 30px auto;
   }
 }
