@@ -1,3 +1,5 @@
+//Private key: 5K467pRHbrfxUYrswYzXBuGJhzH2gAK3fDV3pjVjnmZYfvD4BCh
+// Public key: EOS7KaLGfR5vzQe2WYZmXWV7DkKEpm6Gw18VoJEufS2aVm9zkGWrL
 var eos = {};
 var permissions;
 var user_acc='';

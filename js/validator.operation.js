@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function () {
     })
     //设置管理员
     verify('.setAuthManager', function () {
-
+        setAuthManager();
     })
     //----------------------yl------------------------------
     //账户基本配置
