@@ -25,4 +25,20 @@ window.addEventListener('DOMContentLoaded', function () {
     verify('.acceptissuer', function () {
         acceptissuer();
     })
+    //授权
+    verify('.setapprove', function () {
+        setapprove();
+    })
+    //使用授权
+    verify('.transferfrom', function () {
+        transferfrom();
+    })
+    //按时间锁仓
+    verify('.setlocktime', function () {
+        setlocktime();
+    })
+    //按比例锁仓
+    verify('.setlockrate', function () {
+        setlockrate();
+    })
 }, false)
