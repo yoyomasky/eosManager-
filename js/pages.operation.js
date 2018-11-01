@@ -168,20 +168,23 @@ function renderTransfer(data) {
   }
   tBody.innerHTML = html
 }
-
+/**
+ * 分页插件文档地址
+ * https://coding.net/u/mfyj/p/mf_public/git
+ */
 var p_transfer = pagination({
-  wrap: '#tranfer',
-  total: 15, // 数据总条数
-  size: 4, // 每页数据条数
+  el: '#tranfer',
+  total: 15,
+  size: 4,
   cb: function () {
-    var currentPage = this.cur // 获取当前页数
+    var currentPage = this.cur
     window.tBody = document.querySelector('.transferTable tbody')
     window.colspanLen = document.querySelectorAll('.transferTable th').length
     // 加载loading层
     var tLoading = utils.loading.create(tBody, colspanLen)
     // setTimeout 模拟ajax
     setTimeout(function () {
-      // 获取数据调用renderTransfer方法,渲染数据
+      // 获取数据调用renderTransfer方法,渲染
       var _data = transferData[currentPage - 1]
       // 删除loading层
       utils.loading.remove(tBody, tLoading)

@@ -5,22 +5,16 @@
 ;
 (function (win) {
   function Pages(args) {
-    this.wrap = document.querySelector(args.wrap)
+    this.el = document.querySelector(args.el)
     this.cur = (args.cur || 1) * 1
     this.total = args.total * 1
     this.size = args.size * 1
     this.pageNum = args.pageNum || 5
     this.pageCount = Math.ceil(this.total / this.size)
-    this.startPage = 0
+    this.startPage = 1
     this.endPage = this.pageCount
-    this.showAll = true
+    this.showAll = this.pageCount > this.pageNum
     this.showItems = []
-    if (this.pageCount > this.pageNum) {
-      this.showPage = (this.pageNum - 1) / 2
-    } else {
-      this.showAll = false
-      this.showPage = (this.pageCount - 1) / 2
-    }
     this.cb = args.cb || args.callback || function () {}
     this.doms = ''
     this.lang = {
@@ -59,7 +53,7 @@
         },
         false
       )
-      this.wrap.appendChild(pageWrap)
+      this.el.appendChild(pageWrap)
       this.doms = pageWrap
     },
     changeLang: function (lang) {
@@ -103,18 +97,21 @@
     },
     // 设置显示的页码
     setStartEnd: function () {
-      var left = this.cur - this.showPage,
-        right = this.cur + this.showPage
-      if (left < 1) {
-        left = 1
-        right += this.showPage - this.cur + 1
+      if (this.pageCount > this.pageNum) {
+        _showPage = (this.pageNum - 1) / 2
+        var left = this.cur - _showPage,
+          right = this.cur + _showPage
+        if (left < 1) {
+          left = 1
+          right += _showPage - this.cur + 1
+        }
+        if (right > this.pageCount) {
+          right = this.pageCount
+          left -= _showPage - (this.pageCount - this.cur)
+        }
+        this.startPage = left
+        this.endPage = right
       }
-      if (right > this.pageCount) {
-        right = this.pageCount
-        left -= this.showPage - (this.pageCount - this.cur)
-      }
-      this.startPage = left
-      this.endPage = right
     },
     // 中间页
     pageMid: function () {
