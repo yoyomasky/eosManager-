@@ -138,15 +138,6 @@ var transferData = [
     number: 12122,
     state: '成功',
     time: '2018-10-31'
-  }, {
-    num: 1212,
-    account: 'dasfasfdasfasfasfasfasfasf',
-    impAddr: 'adsfasfasfasdfsafds',
-    expAddr: 'adsdfasfasfasdfsafds',
-    hash: 'afasdfdasf2212fsasf',
-    number: 12122,
-    state: '失败',
-    time: '2018-10-31'
   }]
 ]
 // 数据渲染
@@ -180,8 +171,8 @@ function renderTransfer(data) {
 
 var p_transfer = pagination({
   wrap: '#tranfer',
-  total: transferData.length,
-  size: 1,
+  total: 15, // 数据总条数
+  size: 4, // 每页数据条数
   cb: function () {
     var currentPage = this.cur // 获取当前页数
     window.tBody = document.querySelector('.transferTable tbody')
