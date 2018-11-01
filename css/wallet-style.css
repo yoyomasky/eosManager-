@@ -1,8 +1,9 @@
 @media screen and (min-width: 1200px) {
-
   body {
     font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+      Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei,
+      sans-serif;
     color: #1a1a1a;
     background-color: #eef2f6;
   }
@@ -85,9 +86,11 @@
     background-color: #fff;
   }
 
-  .tool-content-wrap>li {
+  .tool-content-wrap > li {
     display: none;
     min-height: 600px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   /*.tool-content-wrap>li:first-child {*/
@@ -189,16 +192,16 @@
     overflow: hidden;
   }
 
-  .float-wrap>* {
+  .float-wrap > * {
     display: inline-block;
     vertical-align: middle;
   }
 
-  .float-wrap input[type=checkbox] {
+  .float-wrap input[type='checkbox'] {
     display: none;
   }
 
-  .float-wrap input[type=checkbox]+label {
+  .float-wrap input[type='checkbox'] + label {
     vertical-align: middle;
     display: inline-block;
     width: 20px;
@@ -209,7 +212,7 @@
     cursor: pointer;
   }
 
-  .float-wrap input[type=checkbox]:checked+label {
+  .float-wrap input[type='checkbox']:checked + label {
     border-color: #0e9d8b;
     background-color: #0e9d8b;
     background-image: url('../img/checkout-active.png');
@@ -289,7 +292,7 @@
 
   .mf-Pagination-wrap {
     width: 100%;
-    padding: 25px 0;
+    padding-top: 25px;
     text-align: center;
     font-size: 0;
   }
@@ -321,5 +324,9 @@
   .mf-Pagination-wrap button:hover {
     opacity: 0.4;
   }
-
+  .mf-table-loading {
+    width: 60px;
+    height: 60px;
+    margin: 30px auto;
+  }
 }

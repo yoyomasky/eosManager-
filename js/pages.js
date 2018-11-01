@@ -33,8 +33,9 @@
   Pages.prototype = {
     constructor: Pages,
     init: function () {
-      if (this.pageCount < 2) return
-      this.create()
+      if (this.pageCount > 1) {
+        this.create()
+      }
       this.cb.call(this)
       return this
     },
