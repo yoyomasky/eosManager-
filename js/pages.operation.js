@@ -1,3 +1,4 @@
+// 模拟数据
 var transferData = [
   [{
     num: 1212,
@@ -159,6 +160,7 @@ function renderTransfer(data) {
     return
   }
   var html = ''
+  var maxLen = utils.maxLen
   for (var i = 0; i < data.length; i++) {
     html += `
       <tr>
@@ -174,11 +176,6 @@ function renderTransfer(data) {
       `
   }
   tBody.innerHTML = html
-
-  function maxLen(str, len) {
-    len = len || 20
-    return str.length < len ? str : str.substr(0, len) + '...'
-  }
 }
 
 var p_transfer = pagination({

@@ -32,6 +32,10 @@ var utils = {
       }, false)
     })
   },
+  maxLen: function (str, len) {
+    len = len || 20
+    return str.length < len ? str : str.substr(0, len) + '...'
+  },
   loading: {
     create: function (wrap, colspanLen) {
       var loading = document.createElement('tr')
