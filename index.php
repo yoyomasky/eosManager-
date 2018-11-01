@@ -20,6 +20,7 @@
     <script src="/node_modules/eosjs-api/lib/eos-api.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/layer/layer.js"></script>
+    <script src="/js/laydate/laydate.js"></script>
 
     <script src="/js/config.js?v=<?=time()?>"></script>
     <script src="/js/function.js?v=<?=time()?>"></script>
@@ -261,18 +262,18 @@
                 </nav>
                 <ul class="tool-content-content-wrap accreditContentWrap">
                     <!-- 授权 -->
-                    <li>
+                    <li class="setapprove">
                         <p>
                             <label>资产数量:</label>
-                            <input type="text">
+                            <input type="text" class="quantity" data-rule="">
                         </p>
                         <p>
                             <label>授权人:</label>
-                            <input type="text">
+                            <input type="text" class="authorizer" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <p>
                             <label>被授权人:</label>
-                            <input type="text">
+                            <input type="text" class="spender" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <div class="tool-submit-wrap">
                             <button type="button" class="button-bg toolSubmit">确认</button>
@@ -280,22 +281,22 @@
                         </div>
                     </li>
                     <!-- 使用授权 -->
-                    <li>
+                    <li class="transferfrom">
                         <p>
                             <label>资产数量:</label>
-                            <input type="text">
+                            <input type="text" class="quantity" data-rule="">
                         </p>
                         <p>
                             <label>授权人:</label>
-                            <input type="text">
+                            <input type="text" class="authorizer" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <p>
                             <label>被授权人:</label>
-                            <input type="text">
+                            <input type="text" class="spender" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <p>
                             <label>接收者:</label>
-                            <input type="text">
+                            <input type="text" class="to" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <div class="tool-submit-wrap">
                             <button type="button" class="button-bg toolSubmit">确认</button>
@@ -312,30 +313,30 @@
                 </nav>
                 <ul class="tool-content-content-wrap clockContentWrap">
                     <!-- 按时间锁仓 -->
-                    <li>
+                    <li class="setlocktime">
                         <p>
                             <label>执行者:</label>
-                            <input type="text">
+                            <input type="text" class="executor" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <p>
                             <label>资产数量:</label>
-                            <input type="text">
+                            <input type="text" class="quantity" data-rule="">
                         </p>
                         <p>
                             <label>被锁仓的用户:</label>
-                            <input type="text">
+                            <input type="text" class="owner" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <p>
                             <label>开始释放时间:</label>
-                            <input type="text">
+                            <input type="text" class="releaseTime">
                         </p>
                         <p>
                             <label>释放比例:</label>
-                            <input type="text">
+                            <input type="text" class="rate">
                         </p>
                         <p>
                             <label>间隔时间:</label>
-                            <input type="text">
+                            <input type="text" class="gapTime">
                         </p>
                         <div class="tool-submit-wrap">
                             <button type="button" class="button-bg toolSubmit">确认</button>
@@ -343,30 +344,54 @@
                         </div>
                     </li>
                     <!-- 按比例锁仓 -->
-                    <li>
+                    <li class="setlockrate">
                         <p>
                             <label>执行者:</label>
-                            <input type="text">
+                            <input type="text" class="executor" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <p>
                             <label>资产数量:</label>
-                            <input type="text">
+                            <input type="text" class="quantity" data-rule="">
                         </p>
                         <p>
                             <label>被锁仓的用户:</label>
-                            <input type="text">
+                            <input type="text" class="owner" maxlength="12" data-rule='pattern:"verifyAccount__^[a-z1-5.]{12}$"'>
                         </p>
                         <p>
                             <label>释放次数:</label>
-                            <input type="text">
+                            <input type="text" class="type" data-rule="">
                         </p>
                         <p>
                             <label>释放时间1:</label>
-                            <input type="text">
+                            <input type="text" class="time1" data-rule="">
                         </p>
                         <p>
                             <label>释放比例1:</label>
-                            <input type="text">
+                            <input type="text" class="releaseRate1" data-rule="">
+                        </p>
+                        <p>
+                            <label>释放时间2:</label>
+                            <input type="text" class="time2" data-rule="">
+                        </p>
+                        <p>
+                            <label>释放比例2:</label>
+                            <input type="text" class="releaseRate2" data-rule="">
+                        </p>
+                        <p>
+                            <label>释放时间3:</label>
+                            <input type="text" class="time3" data-rule="">
+                        </p>
+                        <p>
+                            <label>释放比例3:</label>
+                            <input type="text" class="releaseRate3" data-rule="">
+                        </p>
+                        <p>
+                            <label>释放时间4:</label>
+                            <input type="text" class="time4" data-rule="">
+                        </p>
+                        <p>
+                            <label>释放比例4:</label>
+                            <input type="text" class="releaseRate4" data-rule="">
                         </p>
                         <div class="tool-submit-wrap">
                             <button type="button" class="button-bg toolSubmit">确认</button>

@@ -180,8 +180,8 @@ function Eos_transaction(contractName,actionName,authorization,data,val){
         }
          console.log(error);
         //资产输入错误
-        if(error.message.indexOf(mMsg['1000000']) != -1){
-            layer.msg(mMsg['3010011']);
+        if(error.message.indexOf(mMsg['1000000']) != -1 || error.message.indexOf(mMsg['1000001']) != -1){
+            layer.msg(mMsg['1000002']);
             return ;
         }else{
             var details = error.error.details;
@@ -196,12 +196,48 @@ function Eos_transaction(contractName,actionName,authorization,data,val){
         }
     });
 }
+//交易成功弹出框
 function alertBootomPop(id){
     $('.footer_pop').show();
     $('.footer_pop > .bottom-hint-content  p').html(id);
     $('.transaction_send_show_btn').attr('href',transactionInfoLink+id);
 
 }
+//关闭弹出框
 function closeBootomPop() {
     $('.footer_pop').hide();
+}
+//合约资产拼接
+function checkAsset(val) {
+    var asset = '';
+    var symbol = '.00000000 A';
+    if(val.indexOf('.') == -1){
+        asset = val + symbol;
+    }else{
+        asset = val;
+    }
+    return asset;
+}
+$(function () {
+
+});
+//时间选择器
+function newDate(id){
+    laydate.render({
+        elem: '#datepicker7'
+        ,type: 'datetime'
+        ,lang: 'en'
+    });
+    laydate.render({
+        elem: '#datepicker8'
+        ,type: 'datetime'
+        ,lang: 'en'
+        ,done: function(value){ //监听日期被切换
+            var date2 = new Date(value);
+            var date1 = new Date($('#datepicker7').val());
+            if(date2.getTime()<date1.getTime()){
+                $('#datepicker8').val($('#datepicker7').val());
+            }
+        }
+    });
 }
